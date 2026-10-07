@@ -53,5 +53,16 @@
             c5.enroll(students); // Método sobrecargado: array de estudiantes
             System.out.println("\nEstudiantes en el curso 5: " + c5.countStudents());
 
+            System.out.println("\nPromedio de estudiantes del curso 5: " + c5.average());
+
+            System.out.println("\n======Rankin curso 5======");
+            c5.ranking();
+
+            System.out.println("\n===== Promedio del curso 5 =====");
+            System.out.println("Promedio: " + c5.average());
+
+            System.out.println("\n===== Estudiantes sobre el promedio del curso 5=====");
+            c5.isAboveAverage();
+
         }//main
     }//class Main

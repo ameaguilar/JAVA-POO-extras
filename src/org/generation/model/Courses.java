@@ -62,9 +62,35 @@ public Courses(String courseName, String professorName, int year){
     }
 
 
-    double average (Courses) {
-        
+    public double average () {
+        int total = 0;
+        for(Student student : students){
+            total = total + student.grade ++;
+        }// for each to sum the grade
+        return (double) total / this.students.size();
+    }//method for calculate the average of a course
+
+    public void ranking() {
+
+        students.sort((student1, student2) -> student2.grade - student1.grade); //sort order the averga but we must indicate the program how
+        for (Student student : students) {
+            System.out.println(student.firstName + " → " + student.grade);
+        }// for
+    }// Method to rank students by grade in a course
+
+    public void isAboveAverage() {
+        double average = this.average();
+
+        for (Student student : this.students) {
+            if (student.grade > average) {
+                System.out.println(student.firstName + " → está por encima del promedio");
+            } else {
+                System.out.println(student.firstName + " → no está por encima del promedio");
+            }
+        }
     }
+
+
 
 
     @Override
